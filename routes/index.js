@@ -23,7 +23,7 @@ router.get('/', (req, res) => {
     })
 })
 //looling for localhost:3000/anything
-router.get('/:id', (req, res) => {
+router.get('/users/:id', (req, res) => {
     console.log("hit a dynamic route");
     console.log(req.params.id);
 
@@ -37,11 +37,11 @@ router.get('/:id', (req, res) => {
         // turn our social property into an array - its just text in the DB
         // wich isnt really anything we can work with
 
-        //  result[0].social = result[0].social.split(',').map(function(item) {
-        //     item = item.trim(); //remove the extra spaces from each word
+         result[0].social = result[0].social.split(',').map(function(item) {
+         item = item.trim(); //remove the extra spaces from each word
 
-        //     return item;
-        //  });
+         return item;
+          });
        //console.log('after split: ', result[0]);
       
 

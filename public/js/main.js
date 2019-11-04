@@ -39,7 +39,7 @@ const myVM = (() => {
         // find the image closet to the anchor tag and get its src property
 
         let imgSrc = this.previousElementSibling.getAttribute('src');
-        let url = `/${this.getAttribute('href')}`;//  /3 route in express. passing data dynamically
+        let url = `/users/${this.getAttribute('href')}`;//  /3 route in express. passing data dynamically
 
         fetch(url)// go get the data fetch boy!
           .then(res => res.json())// parse the json result into a plain object
